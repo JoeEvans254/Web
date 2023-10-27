@@ -1,0 +1,172 @@
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color:#17a335a1;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.nav-dark {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.nav-dark ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-dark ul li {
+    display: inline;
+}
+
+.nav-dark a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-dark ul {
+        display: none;
+    }
+
+    .nav-dark ul.show {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+@media (max-width: 768px) {
+    .nav-dark ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        display: none;
+        text-align: center;
+    }
+
+    .nav-dark ul.show {
+        display: block;
+    }
+
+    .nav-dark a {
+        display: block;
+        padding: 15px;
+    }
+}
+
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+}
+
+.tank {
+    flex: 0 0 auto;
+    width: 400px;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+
+
+
+
+
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="dark-nav.css">
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+    </header>
+
+    <nav class="nav-dark">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tanks.html">Tanks</a></li>
+            <li><a href="aircraft.html">Aircraft</a></li>
+            <li><a href="ships.html">Ships</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Our Mission</h2>
+        <p>War Machine Vehicles is dedicated to providing the latest in military technology, including tanks, aircraft, and ships, to meet the needs of modern warfare. Our mission is to deliver cutting-edge solutions to armed forces worldwide, ensuring security, protection, and peace.</p>
+
+        <h2>Our Team</h2>
+        <p>Our team consists of experts in military technology, engineering, and defense strategies. We are committed to innovation, quality, and reliability in our products, working tirelessly to support the defense of nations.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 War Machine Vehicles</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('.nav-dark ul');
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aircraft</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="dark-nav.css">
+</head>
+<body>
+    <header>
+        <h1>AirCrafts</h1>
+    </header>
+
+    <nav class="nav-dark">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tanks.html">Tanks</a></li>
+            <li><a href="aircraft.html">Aircraft</a></li>
+            <li><a href="ships.html">Ships</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Explore Our Aircraft Collection</h2>
+        <div class="aircraft" id="aircraft1">
+            <img src="file:///C:/Users/HONEYPOT/Downloads/ASSIGNMENT/images/aircraft_images.png" alt="Aircraft 1">
+            <h3>Aircraft Model 1</h3>
+            <p>Description: This advanced aircraft is designed for high-speed combat and precision strikes.</p>
+            <p>Purchase Price: $2,000,000</p>
+        </div>
+        <div class="aircraft" id="aircraft2" style="display: none;">
+            <img src="file:///C:/Users/HONEYPOT/Downloads/ASSIGNMENT/images/aircraft_images%20(1).png" alt="Aircraft 2">
+            <h3>Aircraft Model 2</h3>
+            <p>Description: A versatile aircraft capable of surveillance and air-to-ground missions.</p>
+            <p>Purchase Price: $1,500,000</p>
+        </div>
+        <!-- Add more aircraft entries as needed -->
+        <button onclick="nextAircraft()">Next</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 War Machine Vehicles</p>
+    </footer>
+
+    <script>
+        var currentAircraft = 1;
+        var totalAircraft = 2; // Update with the total number of aircraft
+
+        function nextAircraft() {
+            document.getElementById('aircraft' + currentAircraft).style.display = 'none';
+            currentAircraft = currentAircraft % totalAircraft + 1;
+            document.getElementById('aircraft' + currentAircraft).style.display = 'block';
+        }
+
+        function toggleMenu() {
+            var nav = document.querySelector('.nav-dark ul');
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

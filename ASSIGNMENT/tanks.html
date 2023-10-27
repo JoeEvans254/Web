@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Superbikes</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="dark-nav.css">
+</head>
+<body>
+    <header>
+        <h1>Superbikes</h1>
+    </header>
+
+    <nav class="nav-dark">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tanks.html">Superbike</a></li>
+            <li><a href="aircraft.html">Aircraft</a></li>
+            <li><a href="ships.html">Ships</a></li>
+            <li><a href="about.html">About Us</a></li>
+        
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Explore Our Collection of Superbikes</h2>
+        <div class="bike" id="bike1">
+            <img src="file:///C:/Users/HONEYPOT/Downloads/ASSIGNMENT/images/red_superbike_images.png" alt="Superbike 1" class="vehicle-image">
+            <h3>Superbike Model 1</h3>
+            <p>Description: This high-performance superbike offers speed and agility for enthusiasts.</p>
+            <p>Purchase Price: $20,000</p>
+        </div>
+        <div class="bike" id="bike2" style="display: none;">
+            <img src="file:///C:/Users/HONEYPOT/Downloads/ASSIGNMENT/images/superbike_images.png" alt="Superbike 2" class="vehicle-image">
+            <h3>Superbike Model 2</h3>
+            <p>Description: A stylish and powerful superbike designed for the open road.</p>
+            <p>Purchase Price: $18,000</p>
+        </div>
+        <!-- Add more bike entries as needed -->
+        <button onclick="nextBike()" class="button-animation">Next</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Automobiles</p>
+    </footer>
+
+    <script>
+        var currentBike = 1;
+        var totalBikes = 2; // Update with the total number of superbikes
+
+        function nextBike() {
+            document.getElementById('bike' + currentBike).style.display = 'none';
+            currentBike = currentBike % totalBikes + 1;
+            document.getElementById('bike' + currentBike).style.display = 'block';
+        }
+
+        function toggleMenu() {
+            var nav = document.querySelector('.nav-dark ul');
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+

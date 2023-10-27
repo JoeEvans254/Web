@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ships</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="dark-nav.css">
+</head>
+<body>
+    <header>
+        <h1>Ships</h1>
+    </header>
+
+    <nav class="nav-dark">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tanks.html">Tanks</a></li>
+            <li><a href="aircraft.html">Aircraft</a></li>
+            <li><a href="ships.html">Ships</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Explore Our Ship Collection</h2>
+        <div class="ship" id="ship1">
+            <img src="file:///C:/Users/HONEYPOT/Downloads/ASSIGNMENT/images/yatch_images.png" alt="Ship 1">
+            <h3>Ship Model 1</h3>
+            <p>Description: This state-of-the-art warship is equipped for naval warfare and maritime defense.</p>
+            <p>Purchase Price: $3,000,000</p>
+        </div>
+        <div class "ship" id="ship2" style="display: none;">
+            <img src="file:///C:/Users/HONEYPOT/Downloads/ASSIGNMENT/images/main-154641674_37976876298_3_1.png" alt="Ship 2">
+            <h3>Ship Model 2</h3>
+            <p>Description: A versatile naval vessel suitable for various maritime missions and sea patrols.</p>
+            <p>Purchase Price: $2,500,000</p>
+        </div>
+        <!-- Add more ship entries as needed -->
+        <button onclick="nextShip()">Next</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Automobiles</p>
+    </footer>
+
+    <script>
+        var currentShip = 1;
+        var totalShips = 2; // Update with the total number of ships
+
+        function nextShip() {
+            document.getElementById('ship' + currentShip).style.display = 'none';
+            currentShip = currentShip % totalShips + 1;
+            document.getElementById('ship' + currentShip).style display = 'block';
+        }
+
+        function toggleMenu() {
+            var nav = document.querySelector('.nav-dark ul');
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
